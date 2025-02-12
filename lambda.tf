@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "my_lambda" {
-  function_name = "devops-exam-lambda"
+  function_name = "devops-exam-lambda-aneesh-pattamatta"
   role          = data.aws_iam_role.lambda.arn
   handler       = "lambda_function.lambda_handler"
   runtime       = "python3.8"

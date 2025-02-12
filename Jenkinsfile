@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_REGION = "ap-south-1"  
-        FUNCTION_NAME = "devops-exam-lambda"
+        FUNCTION_NAME = "devops-exam-lambda-aneesh-pattamatta"
     }  
     stages {
         stage('Terraform Init') {
