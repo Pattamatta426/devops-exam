@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Terraform Init') {
             steps {
-                sh 'terraform init'
+                sh 'yes yes | terraform init'
             }
         }
         stage('Terraform Plan') {
