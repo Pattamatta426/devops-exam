@@ -1,8 +1,9 @@
 pipeline {
     agent any
     environment {
-        AWS_REGION = "ap-south-1"  // Update with your region
+        AWS_REGION = "ap-south-1"  
         FUNCTION_NAME = "devops-exam-lambda"
+    }  
     stages {
         stage('Terraform Init') {
             steps {
