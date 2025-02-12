@@ -1,11 +1,11 @@
 resource "aws_lambda_function" "my_lambda" {
-  function_name    = "devops-exam-lambda"
-  role            = data.aws_iam_role.lambda.arn
-  handler        = "lambda_function.lambda_handler"
-  runtime        = "python3.8"
-  filename       = "lambda.zip"
-  timeout        = 10
-  memory_size    = 128
+  function_name = "devops-exam-lambda"
+  role          = data.aws_iam_role.lambda.arn
+  handler       = "lambda_function.lambda_handler"
+  runtime       = "python3.8"
+  filename      = "lambda.zip"
+  timeout       = 10
+  memory_size   = 128
 
   vpc_config {
     subnet_ids         = [aws_subnet.private_subnet.id]
@@ -20,8 +20,8 @@ resource "aws_lambda_function" "my_lambda" {
     }
   }
 
-  tags = {
-    Name = "DevOps-Lambda"
-  }
+  # Remove the tags block temporarily
+  # tags = {
+  #   Name = "DevOps-Lambda"
+  # }
 }
-
