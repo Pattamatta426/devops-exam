@@ -12,6 +12,14 @@ resource "aws_lambda_function" "my_lambda" {
     security_group_ids = [aws_security_group.lambda_sg.id]
   }
 
+  environment {
+    variables = {
+      SUBNET_ID = aws_subnet.private_subnet.id
+      FULL_NAME = "Aneesh Pattamatta"
+      EMAIL     = "aneeshpattamatta2910@gmail.com"
+    }
+  }
+
   tags = {
     Name = "DevOps-Lambda"
   }
